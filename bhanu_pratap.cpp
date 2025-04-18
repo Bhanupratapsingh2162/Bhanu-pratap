@@ -3,7 +3,7 @@
 
 #define MAX 100
 
-// Structure to hold contact information
+
 typedef struct {
     char name[50];
     char phone[15];
@@ -12,7 +12,7 @@ typedef struct {
 Contact phonebook[MAX];
 int count = 0;
 
-// Function to add a contact
+
 void addContact() {
     if (count >= MAX) {
         printf("Phonebook is full!\n");
@@ -28,7 +28,7 @@ void addContact() {
     count++;
 }
 
-// Function to display all contacts
+
 void displayContacts() {
     if (count == 0) {
         printf("Phonebook is empty.\n");
@@ -43,7 +43,7 @@ void displayContacts() {
     }
 }
 
-// Function to search a contact by name
+
 void searchContact() {
     char name[50];
     int found = 0;
@@ -66,7 +66,7 @@ void searchContact() {
     }
 }
 
-// Function to update a contact
+
 void updateContact() {
     char name[50];
     int found = 0;
@@ -89,7 +89,7 @@ void updateContact() {
     }
 }
 
-// Function to delete a contact
+
 void deleteContact() {
     char name[50];
     int found = 0;
@@ -99,7 +99,7 @@ void deleteContact() {
 
     for (int i = 0; i < count; i++) {
         if (strcmp(phonebook[i].name, name) == 0) {
-            // Shift remaining contacts left
+          
             for (int j = i; j < count - 1; j++) {
                 phonebook[j] = phonebook[j + 1];
             }
@@ -115,7 +115,7 @@ void deleteContact() {
     }
 }
 
-// Main function
+
 int main() {
     int choice;
 
@@ -129,7 +129,7 @@ int main() {
         printf("6. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
-        getchar(); // Clear newline from buffer
+        getchar(); 
 
         switch (choice) {
             case 1:
